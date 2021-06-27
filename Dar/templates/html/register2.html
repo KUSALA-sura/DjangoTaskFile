@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kushii Boostrap</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <script type="text/javascript" src="{% static 'JS/bootstrap.min.js' %}"></script>
+</head>
+<body>
+	<div class="container mt-4">
+		<div >
+			<form class="form-group" method="POST">
+				{% csrf_token %}
+				<label>Name:</label>
+				<input type="text" name="name" class="form-control mx-2" placeholder="Enter your name" required>
+				<label>Name:</label>
+				<input type="email" name="email" class="form-control mx-2" placeholder="Enter your email" required>
+				<div class="row">
+					<div class="col">
+					<button type="submit"  class="btn-outline-danger btn-block">login</button>
+					
+					</div>
+					<div class="col">
+					<a href="#" class="btn btn-outline-danger btn-block">Cancel</a>
+					</div>
+				</div>
+			</form>
+			
+		</div>
+
+		
+	</div>
+</body>

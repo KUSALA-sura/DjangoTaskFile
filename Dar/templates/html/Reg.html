@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration form</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <script type="text/javascript" src="{% static 'JS/bootstrap.min.js' %}"></script>
+    <style type="text/css">
+    	input{
+			width: 30%;
+			padding: 12px 10px;
+  			margin: 8px 0;
+  			box-sizing: border-box;
+  			font-size:15px
+  		}
+    </style>
+</head>
+<body class="bg-primary">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-4 col-sm-4 col-xs-12"></div>
+				<div class="col-md-4 col-sm-4 col-xs-12">
+					<form action="{% url 'Reg' %}" method="POST">
+						{% csrf_token %}
+						<h1 style="text-align: center;color: red;">Task Login Form</h1>
+						
+					<div class="form-group">
+						<label for="name">Emp  Name :</label>
+						<input type="text" name="name" placeholder="Enter Your Name" class="form-control" required>
+					</div>
+					<div class="form-group">
+						<label for="email">Emp Email :</label>
+    					<input type="email" name="email" class="form-control" placeholder="Enter email" id="email" required>
+  			       	</div>
+  					<button class="btn btn-success">Login</button>
+  				    <button class="btn btn-warning">New Register</button>
+
+
+		        </form>
+					
+				</div>
+			<div class="col-md-4 col-sm-4 col-xs-12"></div>
+		</div>
+	</div>
+
+</body>
+</html>

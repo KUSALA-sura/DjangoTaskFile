@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>First Page</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row text-center text-light p-3 m-5">
+			<div class="col mx-2 bg-primary border row">
+				<a href="{% url 'kushala' %}" class="btn btn-primary btn-block btn-lg">Login</a>
+			</div>
+			<div class="col bg-primary mx-2 border rounded">
+				<a href="{% url 'newrg' %}" class="btn btn-primary btn-block btn-lg" >singup</a>
+			</div>
+			
+		</div>
+		<div class="row">
+			<div class="col text-center text-success">
+				<h3>or else </h3>
+			</div>
+			
+		</div>
+		<div class="row p-3 m-5">
+			<div class="col mx-2">
+          			<li><a href="#"  ><i class="fa fa-instagram fa-3x"></i></a></li>
+          	</div>
+          	<div class="col mx-2">
+          			<li><a href="#"  ><i class="fa fa-facebook fa-3x"></i></a></li>
+          	</div>
+          	<div class="col mx-2">
+          		<li><a href="#"  title="Twitter"><i class="fa fa-twitter fa-3x"></i></a></li>
+          	</div>
+          	<div class="col mx-2">
+          		<li><a href="#"  title="Google +"><i class="fa fa-google-plus fa-3x"></i></a></li>
+          	</div>
+          	<div class="col mx-2">
+          		<li><a href="#"  title="Linkedin"><i class="fa fa-linkedin fa-3x" ></i></a></li>
+
+          	</div>
+
+
+		</div>
+		<div class="row">
+			<div class="col text-center text-light">
+				
+			</div>
+		</div>
+		<div class="row text-warning text-center">
+			<div class="col">
+				<h1> <img src="{% static 'images/smiley1.gif' %}" alt="" width="65" height="65" style="vertical-align:bottom">Thanks</h1>
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>

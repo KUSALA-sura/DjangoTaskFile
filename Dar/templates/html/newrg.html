@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>New Registration Form </title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <script type="text/javascript" src="{% static 'JS/bootstrap.min.js' %}"></script>
+</head>
+<body>
+   	<div class="container">	
+		<div class="card col bg-secondary text-light mx-4 p-4 m-4">
+			<div class="card-body">
+
+				<h1 style="text-align: center;color: violet">Registration form </h1>
+					<form>
+						Name:<input type="text" name="" placeholder="enter your name" class="form-control my-2">
+						Password:<input type="password" name="" placeholder="enter your password" class="form-control my-2">
+						<div class="row">
+							<div class="col-sm">
+								Age:<input type="number" name="" class="form-control" placeholder="Enter age">
+							</div>
+							<div class="col-sm">
+								<label>Gender:</label>
+								<select class="form-control">
+									<option value="Male"> male</option>
+									<option value="female">female</option>
+								</select>
+							</div>
+						</div>
+
+							Email :<input type="email" name="" placeholder="Enter your email" class="form-control my-2-2">
+								<div class="form-group">
+  									<label for="comment">Address:</label>
+  										<textarea class="form-control" id="comment"></textarea>
+								</div>
+								<div class="form-row">
+    								<div class="form-group col-md-6">
+      									<label for="inputCity">City</label>
+      									<input type="text" class="form-control" id="inputCity">
+    								</div>
+    								<div class="form-group col-md-4">
+      									<label for="inputState">State</label>
+      									<select id="inputState" class="form-control">
+        									<option selected>Choose...</option>
+        									<option selected>Andra Prasadh</option>
+        									<option selected>Karnataka</option>
+      									</select>
+    								</div>
+    								<div class="form-group col-md-2">
+      									<label for="inputZip">Zip</label>
+      										<input type="text" class="form-control" id="inputZip">
+    								</div>
+  								</div>
+  								<label>Languages :</label>
+  								<div class="form-check-inline">
+  									<label class="form-check-label">
+    									<input type="checkbox" class="form-check-input" value="">English
+  									</label>
+								</div>
+								<div class="form-check-inline">
+  									<label class="form-check-label">
+    									<input type="checkbox" class="form-check-input" value="">Telugu
+  									</label>
+								</div>
+								<div class="form-check-inline">
+  									<label class="form-check-label">
+    									<input type="checkbox" class="form-check-input" value="" >Kannada
+  									</label>
+								</div>
+								<div class="row text-center">
+									<div class="center ">
+										<a href="{% url 'kushala' %}" class="btn btn-outline-primary btn-lg">submit</a>
+									</div>
+
+									<div class="center">
+										<a href="#" class="btn btn-outline-danger btn-lg">Cancel</a>
+									</div>
+								</div>
+
+					</form>
+				
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Deatils</title>
+	<style type="text/css">
+		h1{
+			text-align: center;;
+			color: blue;
+
+		}
+		table{
+			margin-left: auto;
+			margin-right: auto;
+			border: 3px;
+			color:white;
+			background-color: brown;
+		}
+		body{
+			background-color: pink;
+		}
+		table,th,td{
+			border:1px solid yellow;
+			padding: 9px;
+		}
+		button {
+  			background-color: #04AA6D;
+  			color: white;
+  			padding: 14px 20px;
+  			margin: 8px 0;
+  			border: none;
+  			cursor: pointer;
+  			width:auto;
+		}
+	</style>
+</head>
+<body>
+	<h1><img src="{% static 'images/smiley1.gif' %}" alt="" width="65" height="65" style="vertical-align:bottom">Registerd All Data Here</h1>
+	<table>
+		<thead>
+			<tr>
+				<th>id</th>
+				<th>uname</th>
+				<th>uemail</th>
+				<th>Rollno</th>
+				<th>sage</th>
+				<th>DateofBirth</th>
+				<th>Address</th>
+				<th>Operations</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for i in data1 %}
+			<tr>
+				<td>{{i.id}}</td>
+				<td>{{i.uname}}</td>
+				<td>{{i.uemail}}</td>
+				<td>{{i.Rollno}}</td>
+				<td>{{i.sage}}</td>
+				<td>{{i.dob}}</td>
+				<td>{{i.addres}}</td>
+				<td>
+					<a href="{%url 'update' i.id %}">
+                    <button type="button" style="background-color:green;">update</button></a>
+                    <a href="#">
+                    <button type="button" style="background-color:orange;">delete</button></a>
+				</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+
+</body>
+</html>
